@@ -13,6 +13,10 @@ class App extends React.Component {
         selectedVideo: null,
     }
 
+    componentDidMount() {
+        this.handleApiSearch('josh clopton')
+    }
+
     handleApiSearch = async (searchTerm) => {
         // where the youtube api is called.
         const apiResponse = await youtube.get('search', {
@@ -29,6 +33,9 @@ class App extends React.Component {
         console.log('user input, youtube fetches this:', apiResponse)
     }
 
+    onVideoSelect = (video) => {
+        this.setState({selectedVideo: video})
+    }
 
     render() {
         const { selectedVideo, allVideos } = this.state;
@@ -47,7 +54,7 @@ class App extends React.Component {
                         </Grid>
                         <Grid item xs={4}>
                             {/* create a VideoList component */}
-                            <VideoList videos={allVideos}/>
+                            <VideoList videos={allVideos} onVideoSelect={ this.onVideoSelect }/>
                         </Grid> 
                     </Grid>
                 </Grid>

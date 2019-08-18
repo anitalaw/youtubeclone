@@ -1,4 +1,6 @@
 ## Youtube Clone
+Youtube clone using React.
+Tech stack and APIs: React, Youtube, Axios, Material UI
 <img src="/public/youtubeclone.gif"><br/>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

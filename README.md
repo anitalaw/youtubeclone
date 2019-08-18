@@ -1,3 +1,6 @@
+## Youtube Clone
+<img src="/public/youtubeclone.gif"><br/>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
